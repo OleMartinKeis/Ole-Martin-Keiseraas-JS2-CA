@@ -1,0 +1,29 @@
+
+$colours: (
+    "primary": #C25CDB,
+    "secondary": #808080,
+    "third": #000000,
+    "fourth": #9A9A9A
+);
+
+@media screen and (min-width:990px){
+    .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar{
+        width: 25%;
+        height: 100vh;
+        align-items: flex-start;
+    }
+}
+
+.navbar-brand{
+    color: map-get($colours, $primary) ;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.navbar-collapse{
+    background-color: map-get($colours, $primary);
+}
