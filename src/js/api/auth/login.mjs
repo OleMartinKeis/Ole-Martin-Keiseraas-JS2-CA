@@ -1,21 +1,26 @@
-import { API_SOCIAL_URL } from "../constants.mjs"
+import { API_SOCIAL_URL } from "../constants.mjs";
+import * as storage from "../storage/index.mjs";
 
 const path ="/auth/login";
-const method ="post";
+const method ="POST";
 
 export async function login(profile) {
-    const loginURL = API_SOCIAL_URL + path;
-    const body = JSON.stringify(profile)
+  const loginURL = API_SOCIAL_URL + path;
+  const body = JSON.stringify(profile);
+  const response = await fetch(loginURL, {
+    headers: {
+      "Content-Type": "application/json",
+    },
+    method,
+    body,
+  });
 
-    const response = await fetch(loginURL, {
-        headers: {
-            "Content-Type": "application/json"
-        },
-        method,
-        body
-    })
+  const { accessToken, ...user } = await response.json();
 
-    const result = await response.json();
-    console.log(result);
+  storage.save("token", accessToken);
 
+  storage.save("profile", user);
+
+  alert("You are logged in now");
 }
+
