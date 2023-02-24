@@ -1,5 +1,6 @@
 import { load } from "../api/storage/index.mjs"
 
+
 export function headers() {
     const token = load("token");
     return {
@@ -8,7 +9,7 @@ export function headers() {
     }
 }
 
-export async function fetchWithToken(url, options) {
+export async function fetchWithToken(url, options = {}) {
     return fetch(url, {
         ...options,
         headers: headers()

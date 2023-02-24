@@ -1,5 +1,5 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
-import { createPost } from "./create.mjs";
+//import { createPost } from "./create.mjs";
 import { fetchWithToken } from "../fetchWithToken.mjs"
 
 const path ="/posts";
@@ -7,7 +7,7 @@ const method ="PUT";
 
 export async function updatePost(postData) {
     if (!postData.id) {
-        console.log("There was an error")
+        console.log("There was an error, please make sure there is an valid ID to your post.")
     }
     const updatePostURL = `${API_SOCIAL_URL}${path}/${postData.id}`;
 
