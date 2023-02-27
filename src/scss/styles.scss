@@ -19,11 +19,14 @@ $colours: (
 }
 
 .navbar-brand{
-    color: map-get($colours, $primary) ;
+    color: map-get($colours, $secondary) ;
     font-weight: 500;
     font-size: 25px;
 }
 
 .navbar-collapse{
     background-color: map-get($colours, $primary);
+}
+.btn {
+    color: map-get($colours, $primary);
 }
