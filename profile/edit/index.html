@@ -54,34 +54,30 @@
             </div>
             <div class="col">
                 <div class="login d-block">
-                    <h2>Register to SocialGram</h2>
-                    <form class="edit-form" class="requires-validation" id="editPost"> 
-                        
+                    <h2>Edit profile</h2>                   
+                        <form id="editProfile">
+
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="title">Title</label>    
-                            <input type="text" class="form-control" name="title" required maxlength="65"/>
+                            <label class="form-label">Name</label>    
+                            <input type="text" class="form-control" disabled name="name"/>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <input type="hidden" class="form-control" name="id" required/>
+                            <label class="form-label">Email</label>    
+                            <input type="email" class="form-control" disabled name="email"/>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="body">Body</label>    
-                            <textarea class="form-control" name="body" id="postBody" cols="30" rows="10" required></textarea>
+                            <label class="form-label">Banner</label>    
+                            <input type="url" class="form-control" name="banner"/>
                         </div>
 
                         <div class="form-outline mb-4">
-                            <label class="form-label" for="tags">Tags</label>    
-                            <input type="text" class="form-control" name="tags" />
+                            <label class="form-label">Avatar</label>    
+                            <input type="url" class="form-control" name="avatar">
                         </div>
 
-                        <div class="form-outline mb-4">
-                            <label class="form-label" for="tags">Media</label>    
-                            <input type="url" class="form-control" name="media" />
-                        </div>
-
-                        <button type="submit" value="submit" class="btn btn-primary btn-block mb-4">Update post</button>
+                        <button type="submit" value="submit" class="btn btn-primary btn-block mb-4">Update profile</button>
 
                     </form>
                 </div>

@@ -8,7 +8,7 @@ export function postTemplate(postData){
         const img = document.createElement('img');
         img.src = postData.media;
         img.alt = `Image from ${postData.title}`;
-        post.append(img)
+        post.append(img);
     }
 
     return post;

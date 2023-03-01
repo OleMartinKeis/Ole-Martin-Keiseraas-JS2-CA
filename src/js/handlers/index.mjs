@@ -1,4 +1,5 @@
 export * from "./register.mjs";
 export * from "./login.mjs";
-export * from "./createpost.mjs";
-export * from "./updatepost.mjs";
+export * from "./createPost.mjs";
+export * from "./updatePost.mjs";
+export * from "./updateProfile.mjs"
