@@ -16,7 +16,6 @@ export function postTemplate(postData){
 
 
 export function renderPostTemplate(postdata, parent) {
-
     parent.append(postTemplate(postdata));
 }
 

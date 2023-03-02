@@ -1,7 +1,7 @@
 import { register } from "../api/auth/register.mjs";
 
 export function setRegisterFormListener() {
-    const form = document.querySelector(".register-form")
+    const form = document.querySelector("#registerForm")
     
     if (form) {
         form.addEventListener("submit", (event) => {
@@ -10,8 +10,6 @@ export function setRegisterFormListener() {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
 
-
-            //Send it to the API
         register(profile)
     })
     }
