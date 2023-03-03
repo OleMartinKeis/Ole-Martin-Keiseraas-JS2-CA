@@ -26,4 +26,5 @@ export default function router() {
     }
 }
 
+router();
 //login();

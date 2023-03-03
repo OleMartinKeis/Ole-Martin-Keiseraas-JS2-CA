@@ -23,7 +23,7 @@ export async function login(profile) {
 
   storage.save("token", accessToken);
 
-  storage.save("profile", usr);
+  storage.save("profile", user);
 
   alert("You are logged in now");
 }
