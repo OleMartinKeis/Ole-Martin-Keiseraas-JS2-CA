@@ -7,7 +7,7 @@ const path ="/posts";
 
 export async function getPosts() {
 
-    const updatePostURL = `${API_SOCIAL_URL}${path}`;
+    const updatePostURL = `${API_SOCIAL_URL}${path}?_author=true&_comments=true&_reactions=true`;
 
     const response = await fetchWithToken(updatePostURL)
 
