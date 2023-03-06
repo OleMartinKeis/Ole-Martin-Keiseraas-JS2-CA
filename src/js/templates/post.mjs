@@ -1,4 +1,6 @@
 
+
+
 export function postTemplate(postData){
     const post = document.createElement("div");
     post.classList.add("post");
@@ -15,8 +17,8 @@ export function postTemplate(postData){
 }
 
 
-export function renderPostTemplate(postdata, parent) {
-    parent.append(postTemplate(postdata));
+export function renderPostTemplate(postData, parent) {
+    parent.append(postTemplate(postData));
 }
 
 export function renderPostTemplates(postDataList, parent) {
