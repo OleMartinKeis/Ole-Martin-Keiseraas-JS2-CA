@@ -17,7 +17,9 @@ export function setSearchListener(posts) {
                 const title = post.title.toLowerCase();
                 const body = post.body.toLowerCase();
                 const term = searchTerm.toLowerCase();
-                return title.includes(term) || body.includes(term); 
+                const tagsMatch = Boolean(post.tags.map(tag => tag.toLowerCase()).filter(tag => tag.includes(term)).length);
+
+                return title.includes(term) || body.includes(term) || tagsMatch; 
             });
 
 
