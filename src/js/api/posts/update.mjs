@@ -3,7 +3,7 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 import { fetchWithToken } from "../fetchWithToken.mjs"
 
 const path ="/posts";
-const method ="PUT";
+const method ="put";
 
 export async function updatePost(postData) {
     if (!postData.id) {

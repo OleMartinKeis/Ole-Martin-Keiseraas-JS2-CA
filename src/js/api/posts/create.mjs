@@ -1,6 +1,6 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 
-import { fetchWithToken } from "../fetchWithToken.mjs"
+import { fetchWithToken, headers } from "../fetchWithToken.mjs"
 
 const path ="/posts";
 const method ="POST";
@@ -12,6 +12,7 @@ export async function createPost(postData) {
 
     const response = await fetchWithToken(createPostURL, {
         method,
+        headers: headers("application/json"),
         body: JSON.stringify({
             title: postData.title,
             body: postData.body,
@@ -19,6 +20,6 @@ export async function createPost(postData) {
             tags: tagsArray,
         }),
     });
-
+    
     return await response.json();
 }

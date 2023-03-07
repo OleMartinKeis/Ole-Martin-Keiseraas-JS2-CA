@@ -3,12 +3,12 @@ import { getProfile, updateProfile } from "../api/profile/index.mjs";
 import { load } from "../api/storage/index.mjs";
 
 export async function setUpdateProfileListener() {
+   
+
     const form = document.querySelector("#editProfile");
-
-    if (form) {
         const {name, email} = load("profile");
-        const profile = await getProfile(name);
-
+        const profile = await getProfile(name, email);
+        
         const button = form.querySelector("button");
         button.disabled = true;
 
@@ -30,5 +30,5 @@ export async function setUpdateProfileListener() {
 
         updateProfile(profile)
         });
-    }
+
 }

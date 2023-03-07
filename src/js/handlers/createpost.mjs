@@ -2,17 +2,17 @@ import { createPost } from "../api/posts/index.mjs";
 
 
 export function setCreatePostListener() {
-    const form = document.querySelector("#createPost")
-
-    if (form) {
+    const form = document.querySelector("form#createPost")
+        form.innerHTML +=  `<div class=flex> helloooo</div>`
         form.addEventListener("submit", (event) => {
         event.preventDefault()
         const form = event.target;
         const formData = new FormData(form);
         const post = Object.fromEntries(formData.entries());
-
+        console.log(post)
 
         createPost(post)
         });
-    }
+        
+    
 }

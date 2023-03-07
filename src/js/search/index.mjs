@@ -3,7 +3,6 @@
 
 import { debounce } from "../tools/debounce.mjs";
 import { renderPostThumbnails, renderPostThumbnailError } from "../templates/renderPosts.mjs";
-import { displayPosts } from "../index.mjs";
 
 // export function setSearchListener(posts, container) {
 //     const searchForm = document.querySelector("form#search");
@@ -71,4 +70,3 @@ export function setSearchListener(posts, container) {
   }
 
 
-displayPosts()

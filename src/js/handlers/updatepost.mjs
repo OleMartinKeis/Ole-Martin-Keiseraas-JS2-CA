@@ -7,6 +7,7 @@ export async function setUpdatePostListener() {
     const id = url.searchParams.get("id");
 
     if (form) {
+        form.id.value = id;
         const post = await getPost(id);
 
         form.title.value = post.title;

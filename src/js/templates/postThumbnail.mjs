@@ -18,10 +18,10 @@ export class PostThumbnail {
       <div class="card d-flex justify-content-center">
       <div class="user-profile card-header">
           <div class="user-header-cont flex-grow-1">
-              <a class="text-decoration-none text-reset fw-bold" href="profile.html?user=${this.author}"><h5>${this.author}</h5></a>
+              <a class="text-decoration-none text-reset fw-bold" href="profile.html?user=${this.author.name}"><h5>${this.author.name}</h5></a>
           </div>
       </div>
-      <button class="btn follow-btn" id="${this.author}">Follow</button>
+      <button class="btn follow-btn" id="${this.name}">Follow</button>
       <hr>
       <div class="card-body">
         <img class="img-fluid" src="${this.media}"></>
@@ -39,7 +39,7 @@ export class PostThumbnail {
   
     }
   
-    constructor({ id, title, body, tags, created, updated, media = "placeholder", author = {}, comments = [], reactions = [] }) {
+    constructor({ id, title, body, tags, created, updated, media = "placeholder", author = author.name, comments = [], reactions = [] }) {
       this.id = id;
       this.title = title;
       this.body = body;
