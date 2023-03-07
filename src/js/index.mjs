@@ -15,24 +15,22 @@ const container = document.querySelector("#posts");
 
 const path = location.pathname;
 
-if (path === "/profile/login/") {
+if (path === "/profile/login/" || path === "/profile/login/index.html") {
     handlers.setLoginFormListener()
-} else if (path === "/profile/register/"){
+} else if (path === "/profile/register/" || path === "/profile/register/index.html"){
     handlers.setRegisterFormListener();
-   
 }
-else if (path === "/post/create/"){
+else if (path === "/post/create/" || path === "/post/create/index.html"){
     handlers.setCreatePostListener();
     postMethods.createPost(post);
 }
-else if (path === "/post/edit/"){
+else if (path === "/post/edit/" || path === "/post/edit/index.html"){
     handlers.setUpdatePostListener();
     postMethods.updatePost(postData);
 }
-else if (path === "/profile/edit/"){
+else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     handlers.setUpdateProfileListener();
     profileMethods.updateProfile();
-} else if (path === "/posts/index.html") {
+} else if (path === "/posts/" || path === "/posts/index.html") {
     displayPosts(posts, container);
 }
-
