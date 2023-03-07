@@ -6,11 +6,10 @@ import * as templates from "./templates/index.mjs";
 import { setSearchListener } from "./search/index.mjs";
 import { displayPosts } from "./templates/displayPost.mjs";
 import { renderPostThumbnails } from "./templates/renderPosts.mjs";
-
+import { getPost } from "./api/posts/read.mjs";
 
 
 const container = document.querySelector("#posts");
-
 
 
 const path = location.pathname;
@@ -24,9 +23,9 @@ else if (path === "/post/create/" || path === "/post/create/index.html"){
     handlers.setCreatePostListener();
     postMethods.createPost(post);
 }
-else if (path === "/post/edit/" || path === "/post/edit/index.html"){
+else if (path === "/post/edit/" || path === "/post/edit/index.html" ){
     handlers.setUpdatePostListener();
-    postMethods.updatePost(postData);
+    postMethods.updatePost();
 }
 else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     handlers.setUpdateProfileListener();
@@ -34,3 +33,6 @@ else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
 } else if (path === "/posts/" || path === "/posts/index.html") {
     displayPosts(posts, container);
 }
+
+// getPost(4281).then(console.log)
+// || path === `/post/edit/${id}`

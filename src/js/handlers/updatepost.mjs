@@ -7,7 +7,8 @@ export async function setUpdatePostListener() {
     const id = url.searchParams.get("id");
 
     if (form) {
-        form.id.value = id;
+        const button = form.querySelector("button");
+        button.disabled = true;
         const post = await getPost(id);
 
         form.title.value = post.title;
@@ -15,14 +16,16 @@ export async function setUpdatePostListener() {
         form.tags.value = post.tags;
         form.media.value = post.media;
 
-        form.addEventListener("submit", (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const formData = new FormData(form);
-        const post = Object.fromEntries(formData.entries());
-        post.id = id;
+        button.disabled = false;
 
-        updatePost(post)
+        form.addEventListener("submit", (event) => {
+            event.preventDefault()
+            const form = event.target;
+            const formData = new FormData(form);
+            const post = Object.fromEntries(formData.entries());
+            post.id = id;
+
+        updatePost(postData)
         });
     }
 }
