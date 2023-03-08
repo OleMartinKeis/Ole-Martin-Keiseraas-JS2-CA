@@ -1,3 +1,7 @@
+/**This class sends a message to renderPosts to display a message if something goes wrong with rendering of the posts in renderPosts.mjs
+ * 
+ */
+
 export class AlertMessage {
     parser = new DOMParser();
   

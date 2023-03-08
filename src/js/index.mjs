@@ -16,20 +16,20 @@ const path = location.pathname;
 
 if (path === "/profile/login/" || path === "/profile/login/index.html") {
     handlers.setLoginFormListener()
-} else if (path === "/profile/register/" || path === "/profile/register/index.html"){
+} else if (path === "/profile/register/" || path === "/profile/register/register.html"){
     handlers.setRegisterFormListener();
 }
 else if (path === "/post/create/" || path === "/post/create/index.html"){
     handlers.setCreatePostListener();
-    postMethods.createPost(post);
+    
 }
 else if (path === "/post/edit/" || path === "/post/edit/index.html" ){
     handlers.setUpdatePostListener();
-    postMethods.updatePost();
+    
 }
 else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     handlers.setUpdateProfileListener();
-    profileMethods.updateProfile();
+    
 } else if (path === "/posts/" || path === "/posts/index.html") {
     displayPosts(posts, container);
 }

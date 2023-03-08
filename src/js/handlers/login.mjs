@@ -1,5 +1,9 @@
 import { login } from "../api/auth/login.mjs";
 
+/**
+ * This targets the form for logging in with fetchWithToken (a JWT)
+ */
+
 export function setLoginFormListener() {
     const form = document.querySelector("#loginForm")
 

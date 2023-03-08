@@ -1,5 +1,12 @@
 import { getPost, updatePost } from "../api/posts/index.mjs";
 
+/**
+ * This targets the form for updating a post with updatePost()
+ * The form gets all the values necessary to change the profile.
+ * the button.disable makes sure that noone can submit the form before the form has loaded with the pre existing values.
+ */
+
+
 export async function setUpdatePostListener() {
     const form = document.querySelector("#updateForm");
 
