@@ -22,22 +22,7 @@ export function profileTemplate(profileData) {
                 <p>N/A</p>
                 </div>
             </div>
-            <div class="p-4 text-black" style="background-color: #f8f9fa">
-                <div class="d-flex justify-content-end text-center py-1">
-                <div>
-                    <p class="mb-1 h5">${profileData._count.posts}</p>
-                    <p class="small text-muted mb-0">Posts created</p>
-                </div>
-                    <div class="px-3">
-                    <p class="mb-1 h5">${profileData._count.followers}</p>
-                    <p class="small text-muted mb-0">Followers</p>
-                </div>
-                <div>
-                    <p class="mb-1 h5">${profileData._count.following}</p>
-                    <p class="small text-muted mb-0">Following</p>
-                </div>
-                </div>
-            </div>
+
             <div class="card-body p-4 text-black">
                 <div class="mb-5">
                 <p class="lead fw-normal mb-1">About</p>
@@ -95,9 +80,10 @@ export function profileTemplate(profileData) {
         text-decoration: none;
       "
       ;
-      >Back to feed</a
-    >
-  </div>`
+      >Back to feed</a>
+  </div>`;
+
+    return profile;
 }
 
 export function renderProfileTemplate(profileData, parent) {
