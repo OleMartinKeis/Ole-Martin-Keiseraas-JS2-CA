@@ -15,8 +15,12 @@ export function setRegisterFormListener() {
             const formData = new FormData(form);
             const profile = Object.fromEntries(formData.entries());
 
-        register(profile)
-    })
+            register(profile)
+
+            alert("You successfully registered an account!");
+
+            window.location.href = "../login/";
+        });
     }
 
 }

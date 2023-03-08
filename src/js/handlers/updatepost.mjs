@@ -16,6 +16,7 @@ export async function setUpdatePostListener() {
     if (form) {
         const button = form.querySelector("button");
         button.disabled = true;
+
         const post = await getPost(id);
 
         form.title.value = post.title;
@@ -26,13 +27,13 @@ export async function setUpdatePostListener() {
         button.disabled = false;
 
         form.addEventListener("submit", (event) => {
-            event.preventDefault()
+            event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
             const post = Object.fromEntries(formData.entries());
             post.id = id;
 
-        updatePost(postData)
+            updatePost(postData);
         });
     }
 }

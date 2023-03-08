@@ -32,7 +32,9 @@ else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     
 } else if (path === "/posts/" || path === "/posts/index.html") {
     displayPosts(posts, container);
-}
+} else if (path === "/profile/" || path === "/profile/index.html") {
+    handlers.readProfile();
+  }
 
 // getPost(4281).then(console.log)
 // || path === `/post/edit/${id}`
