@@ -101,5 +101,5 @@ export function profileTemplate(profileData) {
 }
 
 export function renderProfileTemplate(profileData, parent) {
-    parent.append(profileTemplateA(profileData));
+    parent.append(profileTemplate(profileData));
   }

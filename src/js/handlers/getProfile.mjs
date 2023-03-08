@@ -1,5 +1,5 @@
 import * as profileTemplate from "../templates/profile.mjs";
-import * as profileMethods from "../api/profiles/index.mjs";
+import * as profileMethods from "../api/profile/index.mjs";
 
 const url = new URL(location.href);
 const name = url.searchParams.get("name");
