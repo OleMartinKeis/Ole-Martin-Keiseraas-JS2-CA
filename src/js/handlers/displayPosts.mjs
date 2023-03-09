@@ -1,6 +1,7 @@
-import { getPosts } from "../api/posts/read.mjs";
+import * as templates from "../templates/index.mjs";
+import * as postMethods from "../api/posts/index.mjs";
 import { setSearchListener } from "../search/index.mjs";
-import { renderPostTemplates } from "./post.mjs";
+import { renderPostTemplates } from "../templates/post.mjs";
 // import { renderPostThumbnails } from "./renderPosts.mjs";
 
 
@@ -11,15 +12,14 @@ import { renderPostTemplates } from "./post.mjs";
  * @param {object} postDataList 
  * @param {object} container 
  */
-export async function displayPosts(postDataList, container) {
-    const posts = await getPosts();
-   
+export async function displayPosts(container) {
+    const posts = await postMethods.getPosts();
+
     try{
         setSearchListener(posts, container);
-
         if (posts.length){
             
-            renderPostTemplates(posts, container);
+            templates.renderPostTemplates(posts, container);
         }
     }
     catch(error){

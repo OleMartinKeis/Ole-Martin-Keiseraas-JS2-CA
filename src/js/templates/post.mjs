@@ -17,6 +17,7 @@ export function postTemplate(postData){
         <div class="d-flex align-items-center justify-content-space-between">
         <button class="btn follow-btn" data-id="${postData.id}">Follow</button>
         <button class="btn delete-btn" data-id="${postData.id}">Delete Post</button>
+        <a href="/post/index.html?id=${postData.id}" class="btn details-btn" data-id="${postData.id}">See details</>
         </div>
         <hr>
         <div class="card-body">
@@ -31,7 +32,7 @@ export function postTemplate(postData){
         </div>
     </div>
     `
-
+   
     if(postData.media) {
         const img = document.createElement('img');
         img.classList.add("img-fluid")
@@ -40,19 +41,21 @@ export function postTemplate(postData){
         post.append(img);
     }
 
-    // const deleteButton = document.querySelector(".delete-btn")
-    // deleteButton.addEventListener("click", () => {
-    //     removePost(postData.id);
-    // });
+    const deleteButton = document.querySelector(".delete-btn")
+    deleteButton.addEventListener("click", () => {
+        removePost(postData.id);
+    });
 
     return post;
 }
 
 
-export function renderPostTemplate(postData, parent) {
-    parent.append(postTemplate(postData));
-}
+
 
 export function renderPostTemplates(postDataList, parent) {
     parent.append(...postDataList.map(postTemplate));
 } 
+
+export function renderPostTemplate(postData, parent) {
+    parent.append(postTemplate(postData));
+}
