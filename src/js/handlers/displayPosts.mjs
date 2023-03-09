@@ -14,9 +14,11 @@ import { renderPostTemplates } from "../templates/post.mjs";
  */
 export async function displayPosts(container) {
     const posts = await postMethods.getPosts();
-
+    console.log(posts)
+    
     try{
         setSearchListener(posts, container);
+
         if (posts.length){
             
             templates.renderPostTemplates(posts, container);

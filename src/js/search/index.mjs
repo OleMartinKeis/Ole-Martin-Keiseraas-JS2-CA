@@ -1,3 +1,5 @@
+import { getPosts } from "../api/posts/read.mjs";
+import { postTemplate } from "../templates/post.mjs";
 import { debounce } from "../tools/debounce.mjs";
 // import { renderPostThumbnails, renderPostThumbnailError } from "../templates/renderPosts.mjs";
 
@@ -8,13 +10,14 @@ import { debounce } from "../tools/debounce.mjs";
  */
 
 export function setSearchListener(posts, container) {
+    console.log(posts)
     function onSearch(event) {
       event.preventDefault();
       
       const searchTerm = event.target.value;
   
       if (!searchTerm.length) {
-        renderPostThumbnails(posts, container);
+        postTemplate(posts, container);
         return
       }
   
@@ -24,7 +27,7 @@ export function setSearchListener(posts, container) {
   
       const term = searchTerm.toLowerCase();
     
-      const filteredPosts = posts.filter(function (post) {
+      const filteredPosts = posts.filter((post) => {
         const title = post.title.toLowerCase();
   
         const body = post.body ? post.body.toLowerCase() : "";
@@ -36,9 +39,9 @@ export function setSearchListener(posts, container) {
       })
     
       if (filteredPosts.length > 0) {
-        renderPostThumbnails(filteredPosts, container);
+        postTemplate(filteredPosts);
       } else {
-        renderPostThumbnailError("There are no messages that match your search term.", "warning", container)
+        return("There are no messages that match your search term.", "warning", container)
       }
     }
   

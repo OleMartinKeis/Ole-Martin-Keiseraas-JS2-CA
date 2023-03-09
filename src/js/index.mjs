@@ -1,5 +1,6 @@
 
 import * as handlers from "./handlers/index.mjs"
+import { setSearchListener } from "./search/index.mjs";
 
 // import { renderPostThumbnails } from "./templates/renderPosts.mjs";
 
@@ -24,11 +25,11 @@ else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
 
 } else if (path === "/posts/" || path === "/posts/index.html") {
     handlers.displayPosts(posts, container);
+    setSearchListener()
 } else if (path === "/profile/" || path === "/profile/index.html") {
     handlers.readProfile();
 } else if (path === "/post/" || path === "/post/index.html") {
     handlers.displayPost();
 }
 
-// getPost(4281).then(console.log)
 // path === `/post/edit/${id}`
