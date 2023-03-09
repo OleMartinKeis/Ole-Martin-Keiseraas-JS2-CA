@@ -1,4 +1,4 @@
-import { deletePost } from "../handlers/deletePost.mjs";
+
 
 /**
  * This class is the template for all posts with all the object info for the post
@@ -20,7 +20,7 @@ export class PostThumbnail {
                 <a class="text-decoration-none text-reset fw-bold" href="profile.html?user=${this.author.name}"><h5>${this.author.name}</h5></a>
             </div>
         </div>
-        <div class="d-flex align-items-center justify-content-space-between"
+        <div class="d-flex align-items-center justify-content-space-between">
         <button class="btn follow-btn" data-id="${this.id}">Follow</button>
         <button class="btn delete-btn" data-id="${this.id}">Delete Post</button>
         </div>

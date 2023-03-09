@@ -7,16 +7,16 @@ const path ="/profiles";
 
 export async function getProfiles() {
 
-    const updateProfileURL = `${API_SOCIAL_URL}${path}`;
+    const updateProfileURL = `${API_SOCIAL_URL}${path}?_following=true&_followers=true`;
 
     const response = await fetchWithToken(updateProfileURL)
 
     return await response.json();
 }
 
-export async function getProfile(name) {
+export async function getProfile(id) {
 
-    const getProfileURL = `${API_SOCIAL_URL}${path}/${name}`;
+    const getProfileURL = `${API_SOCIAL_URL}${path}/${id}?_following=true&_followers=true`;
 
     const response = await fetchWithToken(getProfileURL)
 

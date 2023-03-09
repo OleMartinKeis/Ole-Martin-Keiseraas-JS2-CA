@@ -7,6 +7,7 @@ import { setSearchListener } from "./search/index.mjs";
 import { displayPosts } from "./templates/displayPost.mjs";
 import { renderPostThumbnails } from "./templates/renderPosts.mjs";
 import { getPost } from "./api/posts/read.mjs";
+import { updatePost } from "./api/posts/index.mjs";
 
 
 const container = document.querySelector("#posts");
@@ -29,12 +30,12 @@ else if (path === "/post/edit/" || path === "/post/edit/index.html" ){
 }
 else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     handlers.setUpdateProfileListener();
-    
+
 } else if (path === "/posts/" || path === "/posts/index.html") {
     displayPosts(posts, container);
 } else if (path === "/profile/" || path === "/profile/index.html") {
     handlers.readProfile();
   }
 
-// getPost(4281).then(console.log)
+getPost(4281).then(console.log)
 // || path === `/post/edit/${id}`

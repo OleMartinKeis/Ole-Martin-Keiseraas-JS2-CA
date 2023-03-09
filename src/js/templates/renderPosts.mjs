@@ -8,6 +8,12 @@ export function renderPostThumbnails(posts, container) {
     container.append(...thumbnails);
 }
   
+export function renderPostThumbnail(post, container) {
+    const thumbnail = post.map(post => (new PostThumbnail(post)).render());
+    container.clear();
+    container.append(...thumbnail);
+}
+
 export function renderPostThumbnailError(message, type, container) {
     const alert = new AlertMessage(message, type);
     container.clear();

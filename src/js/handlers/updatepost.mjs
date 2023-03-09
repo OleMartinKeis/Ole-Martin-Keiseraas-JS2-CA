@@ -9,15 +9,16 @@ import { getPost, updatePost } from "../api/posts/index.mjs";
 
 export async function setUpdatePostListener() {
     const form = document.querySelector("#updateForm");
-
     const url = new URL(location.href);
+    const post = await getPost();
+    
     const id = url.searchParams.get("id");
-
+    console.log(url)
     if (form) {
         const button = form.querySelector("button");
         button.disabled = true;
 
-        const post = await getPost(id);
+
 
         form.title.value = post.title;
         form.body.value = post.body;
@@ -33,7 +34,7 @@ export async function setUpdatePostListener() {
             const post = Object.fromEntries(formData.entries());
             post.id = id;
 
-            updatePost(postData);
+            updatePost(post);
         });
     }
 }

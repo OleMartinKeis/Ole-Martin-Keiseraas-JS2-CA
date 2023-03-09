@@ -16,8 +16,6 @@ export async function setUpdateProfileListener() {
     const following = document.querySelector("#following");
     const postCount = document.querySelector("#postCount");
    
-
-
     if (form) {
         const {name, email} = load("profile");
         const profile = await getProfile(name, email);
