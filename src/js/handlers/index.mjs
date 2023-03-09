@@ -5,3 +5,4 @@ export * from "./updatePost.mjs";
 export * from "./updateProfile.mjs"
 export * from "./deletePost.mjs"
 export * from "./getProfile.mjs"
+export * from "./getPost.mjs"

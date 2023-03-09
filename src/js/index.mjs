@@ -5,7 +5,7 @@ import * as profileMethods from "./api/profile/index.mjs"
 import * as templates from "./templates/index.mjs";
 import { setSearchListener } from "./search/index.mjs";
 import { displayPosts } from "./templates/displayPost.mjs";
-import { renderPostThumbnails } from "./templates/renderPosts.mjs";
+// import { renderPostThumbnails } from "./templates/renderPosts.mjs";
 import { getPost } from "./api/posts/read.mjs";
 import { updatePost } from "./api/posts/index.mjs";
 
@@ -24,7 +24,7 @@ else if (path === "/post/create/" || path === "/post/create/index.html"){
     handlers.setCreatePostListener();
     
 }
-else if (path === "/post/edit/" || path === "/post/edit/index.html" ){
+else if (path === "/post/edit/" || path === "/post/edit/index.html"){
     handlers.setUpdatePostListener();
     
 }
@@ -35,7 +35,9 @@ else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     displayPosts(posts, container);
 } else if (path === "/profile/" || path === "/profile/index.html") {
     handlers.readProfile();
-  }
+} else if (path === "/post/") {
+    handlers.readPost();
+}
 
-getPost(4281).then(console.log)
-// || path === `/post/edit/${id}`
+// getPost(4281).then(console.log)
+// path === `/post/edit/${id}`

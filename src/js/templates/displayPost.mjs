@@ -1,6 +1,7 @@
 import { getPosts } from "../api/posts/read.mjs";
 import { setSearchListener } from "../search/index.mjs";
-import { renderPostThumbnails } from "./renderPosts.mjs";
+import { renderPostTemplates } from "./post.mjs";
+// import { renderPostThumbnails } from "./renderPosts.mjs";
 
 
 /**This function displays all the posts in posts/index.html
@@ -18,7 +19,7 @@ export async function displayPosts(postDataList, container) {
 
         if (posts.length){
             
-            renderPostThumbnails(posts, container);
+            renderPostTemplates(posts, container);
         }
     }
     catch(error){

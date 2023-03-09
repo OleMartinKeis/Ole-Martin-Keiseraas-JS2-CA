@@ -9,16 +9,18 @@ import { getPost, updatePost } from "../api/posts/index.mjs";
 
 export async function setUpdatePostListener() {
     const form = document.querySelector("#updateForm");
-    const url = new URL(location.href);
-    const post = await getPost();
     
+    const url = new URL(location.href);
     const id = url.searchParams.get("id");
-    console.log(url)
+
+    console.log(url.href)
     if (form) {
+
+        
         const button = form.querySelector("button");
         button.disabled = true;
 
-
+        const post = await getPost(id);
 
         form.title.value = post.title;
         form.body.value = post.body;

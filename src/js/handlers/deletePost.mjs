@@ -2,9 +2,9 @@ import { removePost } from "../api/posts/delete.mjs"
 
 
 export function deletePost() {
-    const deleteButton = querySelector("button.btn.delete-btn")
+    const deleteButton = document.querySelector(".delete-btn")
     deleteButton.addEventListener("click", () => {
-        removePost(id);
+        removePost(postData.id);
     
         setTimeout(() => {
             location.reload();

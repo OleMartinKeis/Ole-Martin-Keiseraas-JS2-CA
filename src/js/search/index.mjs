@@ -1,5 +1,5 @@
 import { debounce } from "../tools/debounce.mjs";
-import { renderPostThumbnails, renderPostThumbnailError } from "../templates/renderPosts.mjs";
+// import { renderPostThumbnails, renderPostThumbnailError } from "../templates/renderPosts.mjs";
 
 /**
  * 

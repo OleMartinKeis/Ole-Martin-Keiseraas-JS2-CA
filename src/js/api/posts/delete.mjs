@@ -3,7 +3,7 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 import { fetchWithToken } from "../fetchWithToken.mjs"
 
 const path ="/posts";
-const method ="DELETE";
+const method ="delete";
 
 export async function removePost(id) {
     if (!id) {
