@@ -14,8 +14,7 @@ import { renderPostTemplates } from "../templates/post.mjs";
  */
 export async function displayPosts(container) {
     const posts = await postMethods.getPosts();
-    console.log(posts)
-    
+    const postContainer = document.querySelector("#posts"); 
     try{
         setSearchListener(posts, container);
 

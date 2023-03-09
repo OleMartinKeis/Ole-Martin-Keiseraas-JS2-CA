@@ -7,7 +7,7 @@ const id = url.searchParams.get("id");
  * This export function renders single post with ID as parameter using posttemplate from templates/post.mjs.
  */
 
-export async function displayPost(container) {
+export async function displayPost() {
   const post = await postMethods.getPost(id);
   const postContainer = document.querySelector("#posts");
   templates.renderPostTemplate(post, postContainer);

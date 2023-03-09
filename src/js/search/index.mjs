@@ -10,7 +10,6 @@ import { debounce } from "../tools/debounce.mjs";
  */
 
 export function setSearchListener(posts, container) {
-    console.log(posts)
     function onSearch(event) {
       event.preventDefault();
       

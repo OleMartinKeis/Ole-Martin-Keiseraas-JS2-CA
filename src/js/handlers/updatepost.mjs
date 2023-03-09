@@ -20,7 +20,7 @@ export async function setUpdatePostListener() {
         const button = form.querySelector("button");
         button.disabled = true;
 
-        const post = await getPost();
+        const post = await getPost(id);
 
         form.title.value = post.title;
         form.body.value = post.body;

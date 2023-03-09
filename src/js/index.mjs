@@ -1,6 +1,9 @@
 
+import { getPosts } from "./api/posts/read.mjs";
 import * as handlers from "./handlers/index.mjs"
+import { displayPosts } from "./handlers/index.mjs";
 import { setSearchListener } from "./search/index.mjs";
+import { clearHTML } from "./tools/clear.mjs";
 
 // import { renderPostThumbnails } from "./templates/renderPosts.mjs";
 
@@ -22,10 +25,10 @@ else if (path === "/post/edit/" || path === "/post/edit/index.html"){
 }
 else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
     handlers.setUpdateProfileListener();
-
 } else if (path === "/posts/" || path === "/posts/index.html") {
-    handlers.displayPosts(posts, container);
-    setSearchListener()
+    const posts = getPosts()
+    handlers.displayPosts(container);
+    setSearchListener(posts, container)
 } else if (path === "/profile/" || path === "/profile/index.html") {
     handlers.readProfile();
 } else if (path === "/post/" || path === "/post/index.html") {
@@ -33,3 +36,4 @@ else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
 }
 
 // path === `/post/edit/${id}`
+

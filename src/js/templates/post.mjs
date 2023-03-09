@@ -3,6 +3,11 @@ import { removePost } from "../api/posts/delete.mjs";
 
 
 export function postTemplate(postData){
+
+    if (Array.isArray(postData)) {
+        return postData.map(postTemplate)
+    }
+
     const post = document.createElement("div");
     
     const container = document.querySelector("#posts");
