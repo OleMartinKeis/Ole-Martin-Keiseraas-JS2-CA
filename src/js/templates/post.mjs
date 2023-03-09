@@ -5,7 +5,7 @@ import { removePost } from "../api/posts/delete.mjs";
 export function postTemplate(postData){
     const post = document.createElement("div");
     
-    const container = document.querySelectorAll("#posts");
+    const container = document.querySelector("#posts");
 
     container.innerHTML += `
         <div class="card d-flex align-items-center justify-content-center mb-5" style="margin-top: 75px; padding: 15px;">
@@ -30,7 +30,7 @@ export function postTemplate(postData){
         <div class="card-footer text-muted d-flex align-items-center justify-content-around">
         </div>
     </div>
-    ` 
+    `
 
     if(postData.media) {
         const img = document.createElement('img');
@@ -40,10 +40,10 @@ export function postTemplate(postData){
         post.append(img);
     }
 
-    const deleteButton = document.querySelector(".delete-btn")
-    deleteButton.addEventListener("click", () => {
-        removePost(postData.id);
-    });
+    // const deleteButton = document.querySelector(".delete-btn")
+    // deleteButton.addEventListener("click", () => {
+    //     removePost(postData.id);
+    // });
 
     return post;
 }
