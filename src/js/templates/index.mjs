@@ -1,6 +1,3 @@
-export * from "./alertmessage.mjs"
-export * from "../handlers/displayPosts.mjs"
+
 export * from "./post.mjs"
-export * from "./renderPosts.mjs"
-export * from "./postThumbnail.mjs"
 export * from "./profile.mjs"

@@ -1,7 +1,8 @@
 import * as templates from "../templates/index.mjs";
 import * as postMethods from "../api/posts/index.mjs";
-import { setSearchListener } from "../search/index.mjs";
+// import { setSearchListener } from "../search/index.mjs";
 import { renderPostTemplates } from "../templates/post.mjs";
+import { doSearch } from "../search/search.mjs";
 // import { renderPostThumbnails } from "./renderPosts.mjs";
 
 
@@ -16,11 +17,11 @@ export async function displayPosts(container) {
     const posts = await postMethods.getPosts();
 
     try{
-        setSearchListener(posts, container);
+        doSearch(posts);
 
         if (posts.length){
             
-            templates.renderPostTemplates(posts, container);
+            templates.postTemplate(posts, container);
         }
     }
     catch(error){

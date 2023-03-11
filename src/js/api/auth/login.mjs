@@ -23,6 +23,10 @@ export async function login(profile) {
     body,
   });
 
+  if (login) {
+    location.href = "../../posts/index.html"
+}
+
   const { accessToken, ...user } = await response.json();
 
   storage.save("token", accessToken);

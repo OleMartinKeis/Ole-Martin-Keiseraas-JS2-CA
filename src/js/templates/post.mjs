@@ -15,7 +15,7 @@ export function postTemplate(postData){
     const post = document.createElement("div");
     
     const container = document.querySelector("#posts");
-
+    
     // container.innerHTML="";
 
     container.innerHTML += `
@@ -52,24 +52,24 @@ export function postTemplate(postData){
         post.append(img);
     }
 
-    const editBtn = document.querySelector(".edit-btn");
-    const deleteButton = document.querySelector(".delete-btn");
-    deleteButton.disable = true;
-
-
-    // if(postData.author.name === profile.name) {
-    //     deleteButton.classList.remove("invisible");
-    //     editBtn.classList.remove("invisible");
-    //     deleteButton.addEventListener("click", () => {
-    //         removePost(postData.id);
     
-    //         // setTimeout(() => {
-    //         //     location.reload();
-    //         //   }, 200);
-    //     });
-    //  }
+
+    const editBtn = document.querySelector(".edit-btn");
+    const deleteBtn = document.querySelector(".delete-btn");
+
+
+
+    if(postData.author.name === profile.name) {
+        deleteBtn.classList.remove("invisible");
+        editBtn.classList.remove("invisible");
+        deleteBtn.addEventListener("click", () => {
+            removePost(postData.id);
+        });
+    }
     
     return post;
+
+    
 }
 
 

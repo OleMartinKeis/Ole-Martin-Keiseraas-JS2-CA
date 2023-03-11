@@ -1,6 +1,7 @@
 import * as profileTemplate from "../templates/profile.mjs";
 import * as profileMethods from "../api/profile/index.mjs";
 import { load } from "../api/storage/index.mjs"
+
 const url = new URL(location.href);
 const name = url.searchParams.get("name");
 

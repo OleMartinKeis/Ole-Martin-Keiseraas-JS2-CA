@@ -1,6 +1,5 @@
 import * as templates from "../templates/index.mjs";
 import * as postMethods from "../api/posts/index.mjs";
-import { clearHTML } from "../tools/clear.mjs";
 
 const url = new URL(location.href);
 const id = url.searchParams.get("id");
