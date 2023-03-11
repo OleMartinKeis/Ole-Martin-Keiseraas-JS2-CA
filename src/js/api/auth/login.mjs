@@ -23,9 +23,6 @@ export async function login(profile) {
     body,
   });
 
-  if (login) {
-    location.href = "../../posts/index.html"
-}
 
   const { accessToken, ...user } = await response.json();
 
@@ -36,4 +33,3 @@ export async function login(profile) {
   alert("You are logged in now");
 }
 
-// https://api.noroff.dev/api/v1/social/auth/login 
