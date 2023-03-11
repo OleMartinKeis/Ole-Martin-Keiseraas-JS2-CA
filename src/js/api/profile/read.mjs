@@ -15,8 +15,8 @@ export async function getProfiles() {
 }
 
 export async function getProfile(id) {
-
-    const getProfileURL = `${API_SOCIAL_URL}${path}/?id=${id}&_following=true&_followers=true`;
+    console.log("id", id)
+    const getProfileURL = `${API_SOCIAL_URL}${path}/${id}?&_following=true&_followers=true`;
 
     const response = await fetchWithToken(getProfileURL)
 

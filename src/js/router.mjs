@@ -27,18 +27,4 @@ const path = location.pathname;
 // }
 
 
-    if (path === "/profile/login/") {
-        handlers.setLoginFormListener()
-    } else if (path === "/profile/register/"){
-        handlers.setRegisterFormListener();
-    }
-    else if (path === "/post/create/"){
-        handlers.setCreatePostListener()
-    }
-    else if (path === "/post/edit/"){
-        handlers.setUpdatePostListener();
-    }
-    else if (path === "/profile/edit/"){
-        handlers.setUpdateProfileListener();
-    }
 

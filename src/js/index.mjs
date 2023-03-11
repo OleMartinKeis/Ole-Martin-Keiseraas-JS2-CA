@@ -4,7 +4,7 @@ import * as handlers from "./handlers/index.mjs"
 import { displayPosts } from "./handlers/index.mjs";
 import { setSearchListener } from "./search/index.mjs";
 import { clearHTML } from "./tools/clear.mjs";
-
+import  listenToSearch  from "./search/search.mjs"
 // import { renderPostThumbnails } from "./templates/renderPosts.mjs";
 
 const container = document.querySelector("#posts");
@@ -24,11 +24,13 @@ else if (path === "/post/edit/" || path === "/post/edit/index.html"){
     handlers.setUpdatePostListener();
 }
 else if (path === "/profile/edit/" || path === "/profile/edit/index.html"){
+    
+    handlers.readProfile();
     handlers.setUpdateProfileListener();
 } else if (path === "/posts/" || path === "/posts/index.html") {
-    const posts = getPosts()
-    handlers.displayPosts(container);
-    setSearchListener(posts, container)
+
+    handlers.displayPosts( container);
+    listenToSearch()
 } else if (path === "/profile/" || path === "/profile/index.html") {
     handlers.readProfile();
 } else if (path === "/post/" || path === "/post/index.html") {

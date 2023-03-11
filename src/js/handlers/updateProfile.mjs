@@ -12,30 +12,24 @@ export async function setUpdateProfileListener() {
     const form = document.querySelector("#editProfile");
     const setAvatar = document.querySelector("#avatar");
     const firstName = document.querySelector("#firstName");
-    const followers = document.querySelector("#followers");
-    const following = document.querySelector("#following");
-    const postCount = document.querySelector("#postCount");
    
     if (form) {
-        const {name, email} = load("profile");
-        const profile = await getProfile(name, email);
-            
+        const {name, email, banner, avatar} = load("profile");
+        console.log("name", name)    
         const button = form.querySelector("button");
         button.disabled = true;
-    
+        
         form.name.value = name;
         form.email.value = email;
-        form.banner.value = profile.banner;
-        form.avatar.value = profile.avatar;
+        form.banner.value = banner;
+        form.avatar.value = avatar;
     
-        setAvatar.innerHTML = `<img src="${profile.avatar}"
+        setAvatar.innerHTML = `<img src="${avatar}"
         class="img-fluid img-thumbnail rounded-circle mb-2"
         style="width: 150px; height: 150px; margin-top:-15px; z-index: 1"></img>`;
         
-        firstName.innerHTML = `${profile.name}`;
-        followers.innerHTML = `${profile._count.followers}`;
-        following.innerHTML = `${profile._count.following}`;
-        postCount.innerHTML = `${profile._count.posts}`;
+        firstName.innerHTML = `${name}`;
+
         
         button.disabled = false;
 
