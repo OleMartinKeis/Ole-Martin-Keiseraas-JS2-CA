@@ -19,3 +19,7 @@
 input:invalid + .help {
     display: block;
 }
+
+.form-control:disabled {
+    cursor: not-allowed;
+}

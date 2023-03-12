@@ -3,6 +3,14 @@ import { API_SOCIAL_URL } from "../constants.mjs";
 import { fetchWithToken } from "../fetchWithToken.mjs"
 
 const path ="/posts";
+<<<<<<< HEAD
+const method ="PUT";
+
+export async function updatePost(postData) {
+    if (!postData.id) {
+        console.log("There was an error, please make sure there is an valid ID to your post.")
+    }
+=======
 const method ="put";
 
 /**updatePost allows the authopr to up date the values of a post he has previously created.
@@ -14,6 +22,7 @@ const method ="put";
 export async function updatePost(postData) {
 
 
+>>>>>>> js2
     const updatePostURL = `${API_SOCIAL_URL}${path}/${postData.id}`;
 
     const tagsArray = postData.tags.split(",");

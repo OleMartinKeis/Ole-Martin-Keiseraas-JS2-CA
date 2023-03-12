@@ -4,57 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream:login.html
-    <title>Document</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="dist/css/styles.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">SocialGram</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="login.html">Log in / Sign up</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" href="profile.html">Profile</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Bookmarks</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Settings and support
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Analytics</a></li>
-                      <li><a class="dropdown-item" href="#">Settings</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="#">Support</a></li>
-                      <li><a class="dropdown-item" href="#">Help Center</a></li>
-                    </ul>
-                  </li>
-                </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-              </div>
-            </div>
-          </nav>
-          <hr>
-    </header>
-    <main>
-        <h1>hello</h1>
-    </main>
-=======
     <title>Social Gram | Log In</title>
     <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/dist/css/styles.css">
@@ -66,15 +15,15 @@
             <div class="col-sm-4 col-3 border-end">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="/index.html">SocialGram</a>
+                      <a class="navbar-brand" href="/index.html">SocialGram</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/profile/login/index.html">Log in</a>
-                            <a class="nav-link active" aria-current="page" href="/profile/register/register.html">Sign up</a>
+                            <a class="nav-link active" aria-current="page" href="/posts/index.html">Feed</a>
+                            <a class="nav-link active" aria-current="page" href="/post/create/index.html">Create a post</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active" href="/profile/index.html">Profile</a>
@@ -106,17 +55,17 @@
             <div class="col">
                 <div class="login col-8 col-lg-8 d-block border-end">
                     <h2>Log In to SocialGram</h2>
-                    <form class="login-form" method="get" action="/profile.html" class="requires-validation">
+                    <form id="loginForm" class="requires-validation">
                         
                         <div class="form-outline mb-4">
-                        <input type="email" id="form2Example1" class="form-control" required/>
-                        <label class="form-label" for="form2Example1">Email address</label>
+                        <input type="email" name="email" id="form2Example1" class="form-control" required/>
+                        <label name="email" class="form-label" for="form2Example1">Email address</label>
                         </div>
                     
                         
                         <div class="form-outline mb-4">
-                        <input type="password" id="form2Example2" class="form-control" required/>
-                        <label class="form-label" for="form2Example2">Password</label>
+                        <input type="password" name="password" id="form2Example2" class="form-control" required/>
+                        <label name="password" class="form-label" for="form2Example2">Password</label>
                         </div>
                     
                         
@@ -163,6 +112,6 @@
             </div>
         </div>
     </div>
->>>>>>> Stashed changes:profile/login/index.html
+    <script type="module" src="/src/js/index.mjs"></script>
 </body>
 </html>
