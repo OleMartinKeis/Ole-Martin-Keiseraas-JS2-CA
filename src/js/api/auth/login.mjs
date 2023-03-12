@@ -7,7 +7,7 @@ const method ="POST";
 /**
  * This function checks your login credentials with the server.
  * If correct this will give you the accessToken (JWT) and let you for example; get a post feed and edit your profile!
- * @param  profile list of necessities to access profile
+ * @param {object} profile list of necessities to access profile
  */
 
 
@@ -31,5 +31,7 @@ export async function login(profile) {
   storage.save("profile", user);
 
   alert("You are logged in now");
+
+  location.href ="/posts/index.html"
 }
 

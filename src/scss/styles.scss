@@ -19,6 +19,7 @@
     }
 }
 
+
 .navbar-brand{
     // color: map-get($colours, $secondary) ;
     font-weight: 500;
@@ -27,4 +28,28 @@
 
 .btn-success{
     max-width: 150px;
+}
+
+form#search{
+    margin-top: 50px;
+}
+
+.btn-primary {
+    background-color: #C25CDB;
+    border: #808080 1px solid;
+}
+
+.btn-primary:hover {
+    background-color: #808080;
+    border: #C25CDB 1px solid;
+    transition: 0.7s;
+}
+
+.navbar-brand {
+    color: #C25CDB;
+}
+
+.navbar-brand:hover {
+    transition: 0.3s;
+    color: #808080;
 }

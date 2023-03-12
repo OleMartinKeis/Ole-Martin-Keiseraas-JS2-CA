@@ -11,15 +11,13 @@
     
 </head>
 <body>
-
     <main>
-        
         <div class="container">
             <div class="row">
-                <div class="col-sm-3 col-4 border-end">
-                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="col-sm-4 col-4 border-end">
+                    <nav class="navbar navbar-expand-lg  bg-body-tertiary">
                         <div class="container-fluid">
-                          <a class="navbar-brand text-wrap" href="/posts/index.html">SocialGram</a>
+                          <a class="navbar-brand text-wrap overflow-visible" href="/posts/index.html">SocialGram</a>
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
@@ -48,17 +46,17 @@
                                 </ul>
                               </li>
                             </ul>
-                            <form class="d-flex" role="search" id="search">
-                              <input required class="form-control me-2" type="search" id="searchBar" name="term" placeholder="Search" aria-label="Search">
-                              <button class="btn btn-outline-success" type="submit">Search</button>
-                            </form>
                             </div>
                         </div>
                     </nav>
                 </div>
                 
                 <div class="col-8 col-lg-8 border-end">
-                    <div class="" id="posts"></div>
+                    <form class="d-flex" role="search" id="search">
+                        <input required class="form-control me-2" type="search" id="searchBar" name="term" placeholder="Search for tags" aria-label="Search">
+                        <button class="btn btn-primary btn-sm" type="submit">Search</button>
+                      </form>
+                    <div id="posts"></div>
 
                 </div>
             </div>

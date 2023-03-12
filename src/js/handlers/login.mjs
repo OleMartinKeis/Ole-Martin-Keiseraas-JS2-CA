@@ -16,9 +16,6 @@ export function setLoginFormListener() {
             const profile = Object.fromEntries(formData.entries());
 
             login(profile)
-
-            alert("You're now logged in!")
-
         });
     }
 }

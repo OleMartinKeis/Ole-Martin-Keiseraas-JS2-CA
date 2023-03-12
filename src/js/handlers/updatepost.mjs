@@ -37,6 +37,11 @@ export async function setUpdatePostListener() {
             post.id = id;
 
             updatePost(post);
+
+            alert("Your post has been updatet!");
+
+            location.href="../../posts/index.html";
         });
+
     }
 }
