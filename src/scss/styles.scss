@@ -24,6 +24,48 @@ $colours: (
     font-size: 25px;
 }
 
+<<<<<<< Updated upstream
 .navbar-collapse{
     background-color: map-get($colours, $primary);
+=======
+.btn-success{
+    max-width: 150px;
+}
+
+form#search{
+    margin-top: 50px;
+    max-width: 60vh;
+}
+
+.btn-primary {
+    background-color: #C25CDB;
+    border: #808080 1px solid;
+}
+
+.btn-primary:hover {
+    background-color: #808080;
+    border: #C25CDB 1px solid;
+    transition: 0.7s;
+}
+
+.navbar-brand {
+    color: #C25CDB;
+}
+
+.navbar-brand:hover {
+    transition: 0.3s;
+    color: #808080;
+}
+
+form#createPost{
+    max-width: 60vh;
+}
+
+form{
+    max-width: 60vh;
+}
+
+.navbar-nav .nav-link.active:hover {
+    color: #C25CDB;
+>>>>>>> Stashed changes
 }
