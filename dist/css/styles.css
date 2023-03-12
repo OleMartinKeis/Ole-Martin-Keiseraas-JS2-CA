@@ -1,16 +1,246 @@
-@media screen and (min-width:990px){
-    .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .navbar{
-        width: 25%;
-        height: 100vh;
-        align-items: flex-start;
-    }
+.btn-success {
+  max-width: 150px;
+  flex-direction: row;
+}
+
+.login-form {
+  margin-top: 3.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.375rem;
+}
+
+.form-check-register {
+  font-size: 10px;
+}
+
+.help {
+  display: none;
+}
+
+input:invalid + .help {
+  display: block;
+}
+
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+.btn {
+=======
+>>>>>>> js2
+.form-control:disabled {
+  cursor: not-allowed;
+}
+
+@media screen and (min-width: 990px) {
+  .navbar .container-fluid, .navbar-expand-lg .navbar-collapse, .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar {
+    width: 25%;
+    height: 100vh;
+    align-items: flex-start;
+  }
 }
 .navbar-brand {
-  color: #C25CDB;
+<<<<<<< HEAD
   font-weight: 500;
   font-size: 25px;
+}
+
+.btn-success {
+  max-width: 150px;
+=======
+  font-weight: 500;
+  font-size: 25px;
+}
+
+.btn-success {
+  max-width: 150px;
+}
+
+form#search {
+  margin-top: 50px;
+  max-width: 60vh;
+}
+
+.btn-primary {
+>>>>>>> Stashed changes
+  background-color: #C25CDB;
+  border-color: #808080;
+  color: #D9D9D9;
+  font-weight: 500;
+}
+.btn:hover {
+  background-color: #808080;
+}
+.btn:focus {
+  background-color: #C25CDB;
+  border-color: #808080;
+  box-shadow: #9A9A9A;
+}
+
+body {
+  margin: 0;
+}
+
+.main {
+  width: 100%;
+  margin: 0;
+  height: 100vh;
+}
+
+.row {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.left {
+  height: 100vh;
+}
+
+.card {
+  margin-top: 3.8rem;
+}
+
+.border-end {
+  height: 100vh;
+}
+
+.main-search {
+  border: 1.5px solid rgba(0, 0, 0, 0.18);
+  margin-top: 3.8rem;
+  padding: 4px;
+  border-radius: 0.375rem;
+}
+
+.mb-3 {
+  margin-top: 3.8rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  padding: 1rem;
+  border-radius: 0.375rem;
+}
+
+.mb-3 a {
+  margin-top: 1rem;
+}
+
+#formFileSm {
+  margin: 1rem 0 1rem 0;
+}
+
+.card-img-profile {
+  max-height: 175px;
+  max-width: 175px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: 1rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.18);
+}
+
+.card-img-top {
+  max-width: 350px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.card-profile {
+  padding: 10px;
+  -webkit-text-stroke: 0.5px #808080;
+  color: #C25CDB;
+}
+
+<<<<<<< Updated upstream
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 22px;
+  margin-right: 22px;
+}
+
+.login {
+  margin-top: 3.8rem;
+}
+
+.col {
+  border-right: 1.5px solid rgba(0, 0, 0, 0.18);
+}
+
+.card-home {
+  background-color: #D9D9D9;
+  margin-top: 3.8rem;
+  padding: 10px;
+  border: 1.5px solid rgba(0, 0, 0, 0.18);
+}
+.card-home .card-body {
+  margin-top: 1rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.18);
+  padding-top: 25px;
+  background-color: white;
+  padding: 5px;
+}
+.card-home .card-title {
+  text-align: center;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin: 0 auto;
+  }
+  .container {
+    margin: 0 auto;
+  }
+  .card, .mb-3 {
+    width: 14rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .col-md-6 {
+    height: 100vh;
+    max-width: 324px;
+  }
+  .card-img-top {
+    max-height: 50px;
+    max-width: 50px;
+    margin-top: 0.4rem;
+  }
+  .card-profile {
+    margin-top: 0.4rem;
+    width: 84px;
+  }
+  .card-profileh3 {
+    font-size: 1px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .col-md-6 {
+    width: 430px;
+  }
+  .col-sm-2 {
+    flex: 0 0 auto;
+    width: 20%;
+  }
+>>>>>>> Stashed changes
+=======
+.navbar-brand:hover {
+  transition: 0.3s;
+  color: #808080;
+}
+
+form#createPost {
+  max-width: 60vh;
+}
+
+form {
+  max-width: 60vh;
+}
+
+.navbar-nav .nav-link.active:hover {
+  color: #C25CDB;
+>>>>>>> Stashed changes
+>>>>>>> js2
 }/*# sourceMappingURL=styles.css.map */

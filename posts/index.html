@@ -11,6 +11,7 @@
     
 </head>
 <body>
+<<<<<<< HEAD
 
     <main>
         
@@ -20,14 +21,23 @@
                     <nav class="navbar navbar-expand-lg bg-body-tertiary">
                         <div class="container-fluid">
                           <a class="navbar-brand" href="/index.html">SocialGram</a>
+=======
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-4 border-end">
+                    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                        <div class="container-fluid">
+                          <a class="navbar-brand text-wrap overflow-visible" href="/posts/index.html">SocialGram</a>
+>>>>>>> js2
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                               <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="/profile/login/index.html">Log in</a>
-                                <a class="nav-link active" aria-current="page" href="/profile/register/register.html">Sign up</a>
+                                <a class="nav-link active" aria-current="page" href="/posts/index.html">Feed</a>
+                                <a class="nav-link active" aria-current="page" href="/post/create/index.html">Create a post</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link active" href="/profile/index.html">Profile</a>
@@ -48,20 +58,40 @@
                                 </ul>
                               </li>
                             </ul>
-                            <form class="d-flex" role="search">
-                              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+<<<<<<< HEAD
+                            <form class="d-flex" role="search" id="search">
+                              <input required class="form-control me-2" type="search" name="term" placeholder="Search" aria-label="Search">
                               <button class="btn btn-outline-success" type="submit">Search</button>
                             </form>
+=======
+>>>>>>> js2
                             </div>
                         </div>
                     </nav>
                 </div>
-                <div class="col">
+                
+<<<<<<< HEAD
+                <div class="col-6">
+                    <template id="postThumbnail"></template>
+                    <div class="postId"></div>
+                    <div id="posts"></div>
+
                     <!--Posts Page-->
+=======
+                <div class="col-8 col-lg-8 border-end">
+                    <form class="d-flex" role="search" id="search">
+                        <input required class="form-control me-2" type="search" id="searchBar" name="term" placeholder="Search for tags" aria-label="Search">
+                        <button class="btn btn-primary btn-sm" type="submit">Search</button>
+                      </form>
+                    <div id="posts">
+                        
+                    </div>
+
+>>>>>>> js2
                 </div>
             </div>
         </div>
     </main>
-
+    <script type="module" src="/src/js/index.mjs"></script>
 </body>
 </html>

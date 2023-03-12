@@ -15,15 +15,15 @@
             <div class="col-sm-4 col-3 border-end">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="/index.html">SocialGram</a>
+                      <a class="navbar-brand" href="/index.html">SocialGram</a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                       </button>
                       <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/profile/login/index.html">Log in</a>
-                            <a class="nav-link active" aria-current="page" href="/profile/register/register.html">Sign up</a>
+                            <a class="nav-link active" aria-current="page" href="/posts/index.html">Feed</a>
+                            <a class="nav-link active" aria-current="page" href="/post/create/index.html">Create a post</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link active" href="/profile/index.html">Profile</a>
@@ -53,19 +53,19 @@
                 </nav>
             </div>
             <div class="col">
-                <div class="login d-block">
+                <div class="login col-8 col-lg-8 d-block border-end">
                     <h2>Log In to SocialGram</h2>
-                    <form class="login-form" class="requires-validation">
+                    <form id="loginForm" class="requires-validation">
                         
                         <div class="form-outline mb-4">
                         <input type="email" name="email" id="form2Example1" class="form-control" required/>
-                        <label class="form-label" for="form2Example1">Email address</label>
+                        <label name="email" class="form-label" for="form2Example1">Email address</label>
                         </div>
                     
                         
                         <div class="form-outline mb-4">
                         <input type="password" name="password" id="form2Example2" class="form-control" required/>
-                        <label class="form-label" for="form2Example2">Password</label>
+                        <label name="password" class="form-label" for="form2Example2">Password</label>
                         </div>
                     
                         
