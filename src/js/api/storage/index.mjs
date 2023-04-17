@@ -1,3 +1,10 @@
+/**
+ * 
+ * @param {*} key 
+ * @param {*} value 
+ */
+
+
 export function save(key,value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
