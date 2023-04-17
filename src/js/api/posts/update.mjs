@@ -5,15 +5,12 @@ import { fetchWithToken } from "../fetchWithToken.mjs"
 const path ="/posts";
 const method ="put";
 
-<<<<<<< HEAD
-=======
 /**updatePost allows the authopr to up date the values of a post he has previously created.
  * 
  * @param {object} postData 
  * @returns body of response
  */
 
->>>>>>> js2
 export async function updatePost(postData) {
 
 

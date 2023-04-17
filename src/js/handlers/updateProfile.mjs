@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-import { getProfile, updateProfile } from "../api/profile/index.mjs";
-
-import { load } from "../api/storage/index.mjs";
-
-export async function setUpdateProfileListener() {
-   
-
-    const form = document.querySelector("#editProfile");
-        const {name, email} = load("profile");
-        const profile = await getProfile(name, email);
-        
-        const button = form.querySelector("button");
-        button.disabled = true;
-
-        form.name.value = name;
-        form.email.value = email;
-        form.banner.value = profile.banner;
-        form.avatar.value = profile.avatar;
-
-        button.disabled = false;
-
-        form.addEventListener("submit", (event) => {
-        event.preventDefault()
-        const form = event.target;
-        const formData = new FormData(form);
-        const profile = Object.fromEntries(formData.entries());
-
-        profile.name = name;
-        profile.email = email;
-
-        updateProfile(profile)
-        });
-
-=======
 import { updateProfile } from "../api/profile/index.mjs";
 
 import { load } from "../api/storage/index.mjs";
@@ -80,5 +45,4 @@ export async function setUpdateProfileListener() {
             updateProfile(profile)
         });
     }
->>>>>>> js2
 }
